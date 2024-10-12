@@ -5,13 +5,10 @@ FROM node:18
 WORKDIR /app
 
 # Copiar o package.json e package-lock.json
-COPY package*.json ./
+COPY . .
 
 # Instalar as dependências
 RUN npm install
-
-# Copiar o restante dos arquivos do projeto
-COPY . .
 
 # Expor a porta que o React vai usar
 EXPOSE 3000
